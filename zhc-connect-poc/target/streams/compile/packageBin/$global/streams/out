@@ -1,0 +1,15 @@
+[0m[[0minfo[0m] [0mPackaging /Users/zhc/zhc-java/target/scala-2.11/zhc-java_2.11-1.0.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	io/bn/kafka[0m
+[0m[[0mdebug[0m] [0m	  /Users/zhc/zhc-java/target/scala-2.11/classes/io/bn/kafka[0m
+[0m[[0mdebug[0m] [0m	io/bn/kafka/connect/MysqlSinkConnector.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/zhc/zhc-java/target/scala-2.11/classes/io/bn/kafka/connect/MysqlSinkConnector.class[0m
+[0m[[0mdebug[0m] [0m	io/bn/kafka/connect/MysqlSinkTask.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/zhc/zhc-java/target/scala-2.11/classes/io/bn/kafka/connect/MysqlSinkTask.class[0m
+[0m[[0mdebug[0m] [0m	io[0m
+[0m[[0mdebug[0m] [0m	  /Users/zhc/zhc-java/target/scala-2.11/classes/io[0m
+[0m[[0mdebug[0m] [0m	io/bn[0m
+[0m[[0mdebug[0m] [0m	  /Users/zhc/zhc-java/target/scala-2.11/classes/io/bn[0m
+[0m[[0mdebug[0m] [0m	io/bn/kafka/connect[0m
+[0m[[0mdebug[0m] [0m	  /Users/zhc/zhc-java/target/scala-2.11/classes/io/bn/kafka/connect[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m

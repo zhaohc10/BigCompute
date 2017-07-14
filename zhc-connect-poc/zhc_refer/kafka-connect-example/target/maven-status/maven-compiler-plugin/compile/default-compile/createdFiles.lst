@@ -1,0 +1,9 @@
+com/example/avro/Test$Builder.class
+com/example/producers/AvroTestProducer.class
+com/example/avro/Test$1.class
+com/example/producers/CommandGenerator.class
+com/example/serializers/SpecificAvroDeserializer.class
+com/example/avro/Test.class
+com/example/TestProcessor.class
+com/example/serializers/SpecificAvroSerializer.class
+com/example/serializers/SpecificAvroSerde.class

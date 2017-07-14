@@ -1,0 +1,7 @@
+/Users/zhc/zhc-git/kafka-connect-example/src/main/java/com/example/serializers/SpecificAvroSerde.java
+/Users/zhc/zhc-git/kafka-connect-example/src/main/java/com/example/producers/AvroTestProducer.java
+/Users/zhc/zhc-git/kafka-connect-example/src/main/java/com/example/producers/CommandGenerator.java
+/Users/zhc/zhc-git/kafka-connect-example/src/main/java/com/example/serializers/SpecificAvroDeserializer.java
+/Users/zhc/zhc-git/kafka-connect-example/src/main/java/com/example/serializers/SpecificAvroSerializer.java
+/Users/zhc/zhc-git/kafka-connect-example/target/generated-sources/com/example/avro/Test.java
+/Users/zhc/zhc-git/kafka-connect-example/src/main/java/com/example/TestProcessor.java

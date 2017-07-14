@@ -1,0 +1,77 @@
+
+---
+version: '2'
+services:
+  zookeeper-src-a:
+    image: confluentinc/cp-zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 22181
+    network_mode: host
+
+  zookeeper-dest:
+    image: confluentinc/cp-zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 42181
+    network_mode: host
+
+  kafka-1-src-a:
+    image: confluentinc/cp-kafka
+    network_mode: host
+    environment:
+      KAFKA_ZOOKEEPER_CONNECT: localhost:22181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+
+  kafka-2-src-a:
+    image: confluentinc/cp-kafka
+    network_mode: host
+    environment:
+      KAFKA_ZOOKEEPER_CONNECT: localhost:22181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9095
+
+  kafka-1-dest:
+    image: confluentinc/cp-kafka
+    network_mode: host
+    environment:
+      KAFKA_ZOOKEEPER_CONNECT: localhost:42181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9072
+
+  kafka-2-dest:
+    image: confluentinc/cp-kafka
+    network_mode: host
+    environment:
+      KAFKA_ZOOKEEPER_CONNECT: localhost:42181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9075
+
+# *********************************
+# base on the investigation, current replicator sitll not support avro converter if use this docker image
+# *********************************
+  connect-host-1:
+    image: confluentinc/cp-enterprise-replicator
+    network_mode: host
+    # This is a workaround for the invalid topic exception. If you allow auto-topic creation, sometimes
+    # the worker fails with Invalid topic exception, restarting fixes the issue.
+    restart: on-failure:3
+    environment:
+      CONNECT_BOOTSTRAP_SERVERS: localhost:9072,localhost:9075
+      CONNECT_REST_PORT: 28082
+      CONNECT_GROUP_ID: "default"
+      CONNECT_CONFIG_STORAGE_TOPIC: "default.config"
+      CONNECT_OFFSET_STORAGE_TOPIC: "default.offsets"
+      CONNECT_STATUS_STORAGE_TOPIC: "default.status"
+      CONNECT_KEY_CONVERTER: "org.apache.kafka.connect.storage.StringConverter"
+#       CONNECT_KEY_CONVERTER_SCHEMA_REGISTRY_URL: http://schema:8081
+      CONNECT_VALUE_CONVERTER: io.confluent.connect.replicator.util.ByteArrayConverter
+                              # io.confluent.connect.replicator.util.ByteArrayConverter
+                              # io.confluent.connect.avro.AvroConverter
+      CONNECT_VALUE_CONVERTER_SCHEMA_REGISTRY_URL: "http://10.14.5.233:8081"
+      CONNECT_INTERNAL_KEY_CONVERTER: "org.apache.kafka.connect.json.JsonConverter"
+      CONNECT_INTERNAL_VALUE_CONVERTER: "org.apache.kafka.connect.json.JsonConverter"
+      CONNECT_REST_ADVERTISED_HOST_NAME: "localhost"
+      CONNECT_LOG4J_ROOT_LOGLEVEL: DEBUG
+    volumes:
+    - /tmp/replicator-host-cluster-test/:/tmp/test
+
+  #     # "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+  #     # "value.converter": "io.confluent.connect.avro.AvroConverter",
+  #     # "value.converter.schema.registry.url": "http://10.14.5.233:8081",
+  #     # VALUE.CONVERTER.SCHEMA.REGISTRY.URL:

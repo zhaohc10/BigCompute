@@ -1,0 +1,9 @@
+#! /bin/bash
+
+TOPICS=test,test2
+
+
+IFS=","
+for topic in ${TOPICS[@]}; do
+	kafka-topics --create --zookeeper 192.168.99.100:2181 --replication-factor 1 --partitions 1 --topic $topic
+done;

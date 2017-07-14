@@ -1,0 +1,4 @@
+luigi
+SQLAlchemy
+PyMySQL
+#mysql-python

@@ -1,0 +1,25 @@
+FROM python:3.6
+
+ADD requirements-3.txt /tmp/requirements-3.txt
+RUN pip3 install -r /tmp/requirements-3.txt
+RUN apt-get update && apt-get install vim -y
+
+ADD zhc_test_code /
+RUN cd / && git clone https://github.com/opendoor-labs/fireflower.git
+#RUN cd /fireflower-master $$ python setup.py install 
+#RUN pip3 install -r /fireflower-master/requirements.txt
+
+RUN mkdir /etc/luigi
+ADD client.cfg /etc/luigi/client.cfg
+
+RUN mkdir /var/log/luigid
+ADD logrotate.cfg /etc/logrotate.d/luigid
+VOLUME /var/log/luigid
+
+RUN mkdir /var/run/luigid
+VOLUME /var/run/luigid
+
+CMD ["/usr/local/bin/luigid"]
+EXPOSE 8082
+
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*

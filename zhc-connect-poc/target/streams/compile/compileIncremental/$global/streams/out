@@ -1,0 +1,52 @@
+[0m[[0mdebug[0m] [0m[naha] [0m
+[0m[[0mdebug[0m] [0m[naha] Initial source changes: [0m
+[0m[[0mdebug[0m] [0m[naha] 	removed:Set()[0m
+[0m[[0mdebug[0m] [0m[naha] 	added: Set(/Users/zhc/zhc-java/src/main/java/io/bn/kafka/connect/BNArvro.java, /Users/zhc/zhc-java/src/main/java/io/bn/kafka/connect/MysqlSinkConnector.java, /Users/zhc/zhc-java/src/main/java/io/bn/kafka/connect/MysqlSinkTask.java)[0m
+[0m[[0mdebug[0m] [0m[naha] 	modified: Set()[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidated products: Set()[0m
+[0m[[0mdebug[0m] [0m[naha] External API changes: API Changes: Set()[0m
+[0m[[0mdebug[0m] [0m[naha] Modified binary dependencies: Set()[0m
+[0m[[0mdebug[0m] [0m[naha] Initial directly invalidated sources: Set(/Users/zhc/zhc-java/src/main/java/io/bn/kafka/connect/BNArvro.java, /Users/zhc/zhc-java/src/main/java/io/bn/kafka/connect/MysqlSinkConnector.java, /Users/zhc/zhc-java/src/main/java/io/bn/kafka/connect/MysqlSinkTask.java)[0m
+[0m[[0mdebug[0m] [0m[naha] [0m
+[0m[[0mdebug[0m] [0m[naha] Sources indirectly invalidated by:[0m
+[0m[[0mdebug[0m] [0m[naha] 	product: Set()[0m
+[0m[[0mdebug[0m] [0m[naha] 	binary dep: Set()[0m
+[0m[[0mdebug[0m] [0m[naha] 	external source: Set()[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/Users/zhc/zhc-java/src/main/java/io/bn/kafka/connect/BNArvro.java, /Users/zhc/zhc-java/src/main/java/io/bn/kafka/connect/MysqlSinkConnector.java, /Users/zhc/zhc-java/src/main/java/io/bn/kafka/connect/MysqlSinkTask.java)[0m
+[0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set(/Users/zhc/zhc-java/src/main/java/io/bn/kafka/connect/BNArvro.java, /Users/zhc/zhc-java/src/main/java/io/bn/kafka/connect/MysqlSinkConnector.java, /Users/zhc/zhc-java/src/main/java/io/bn/kafka/connect/MysqlSinkTask.java)[0m
+[0m[[0mdebug[0m] [0m[naha] Recompiling all 3 sources: invalidated sources (3) exceeded 50.0% of all sources[0m
+[0m[[0minfo[0m] [0mCompiling 3 Java sources to /Users/zhc/zhc-java/target/scala-2.11/classes...[0m
+[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@1fd70e86 directly...[0m
+[0m[[0mdebug[0m] [0mJava compilation took 0.618346104 s[0m
+[0m[[0mdebug[0m] [0mJava analysis took 0.236890764 s[0m
+[0m[[0mdebug[0m] [0mJava compile + analysis took 0.865557234 s[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidating /Users/zhc/zhc-java/src/main/java/io/bn/kafka/connect/BNArvro.java...[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidating (transitively) by inheritance from /Users/zhc/zhc-java/src/main/java/io/bn/kafka/connect/BNArvro.java...[0m
+[0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set(/Users/zhc/zhc-java/src/main/java/io/bn/kafka/connect/BNArvro.java)[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidated by transitive inheritance dependency: Set(/Users/zhc/zhc-java/src/main/java/io/bn/kafka/connect/BNArvro.java)[0m
+[0m[[0mdebug[0m] [0m[naha] The /Users/zhc/zhc-java/src/main/java/io/bn/kafka/connect/BNArvro.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m[naha] 	.[0m
+[0m[[0mdebug[0m] [0m[naha] All member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidating /Users/zhc/zhc-java/src/main/java/io/bn/kafka/connect/MysqlSinkConnector.java...[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidating (transitively) by inheritance from /Users/zhc/zhc-java/src/main/java/io/bn/kafka/connect/MysqlSinkConnector.java...[0m
+[0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set(/Users/zhc/zhc-java/src/main/java/io/bn/kafka/connect/MysqlSinkConnector.java)[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidated by transitive inheritance dependency: Set(/Users/zhc/zhc-java/src/main/java/io/bn/kafka/connect/MysqlSinkConnector.java)[0m
+[0m[[0mdebug[0m] [0m[naha] The /Users/zhc/zhc-java/src/main/java/io/bn/kafka/connect/MysqlSinkConnector.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m[naha] 	notify, wait, equals, taskClass, USER_CONFIG, TOPICS_CONFIG, PORT_CONFIG, validate, taskConfigs, config, stop, PASSWORD_CONFIG, notifyAll, initialize, HOST_CONFIG, version, reconfigure, <init>, toString, getClass, start, MysqlSinkConnector, hashCode.[0m
+[0m[[0mdebug[0m] [0m[naha] All member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0m[naha] Name hashing optimization doesn't apply to non-Scala dependency: /Users/zhc/zhc-java/src/main/java/io/bn/kafka/connect/MysqlSinkConnector.java[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidating /Users/zhc/zhc-java/src/main/java/io/bn/kafka/connect/MysqlSinkTask.java...[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidating (transitively) by inheritance from /Users/zhc/zhc-java/src/main/java/io/bn/kafka/connect/MysqlSinkTask.java...[0m
+[0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set(/Users/zhc/zhc-java/src/main/java/io/bn/kafka/connect/MysqlSinkTask.java)[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidated by transitive inheritance dependency: Set(/Users/zhc/zhc-java/src/main/java/io/bn/kafka/connect/MysqlSinkTask.java)[0m
+[0m[[0mdebug[0m] [0m[naha] The /Users/zhc/zhc-java/src/main/java/io/bn/kafka/connect/MysqlSinkTask.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m[naha] 	notify, wait, equals, TOPICS_CONFIG, open, stop, notifyAll, initialize, onPartitionsRevoked, version, <init>, MysqlSinkTask, put, flush, toString, getClass, start, close, onPartitionsAssigned, hashCode.[0m
+[0m[[0mdebug[0m] [0m[naha] All member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0m[naha] Name hashing optimization doesn't apply to non-Scala dependency: /Users/zhc/zhc-java/src/main/java/io/bn/kafka/connect/MysqlSinkConnector.java[0m
+[0m[[0mdebug[0m] [0m[naha] Name hashing optimization doesn't apply to non-Scala dependency: /Users/zhc/zhc-java/src/main/java/io/bn/kafka/connect/MysqlSinkTask.java[0m
+[0m[[0mdebug[0m] [0m[naha] New invalidations:[0m
+[0m[[0mdebug[0m] [0m[naha] 	Set()[0m
+[0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set()[0m
+[0m[[0mdebug[0m] [0m[naha] Previously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0mdebug[0m] [0m[naha] 	Set()[0m
+[0m[[0mdebug[0m] [0m[naha] All newly invalidated sources after taking into account (previously) recompiled sources:Set()[0m

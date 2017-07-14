@@ -1,0 +1,31 @@
+#! /bin/bash
+
+# stop and rm everything kafka.
+
+echo $'stopping containers..'
+
+docker stop kafka-rest
+docker stop kafka-connect
+docker stop kafka
+docker stop schema-registry
+docker stop zookeeper
+docker stop kafka-postgres
+
+echo $'\nremoving containers..'
+
+docker rm kafka-rest
+docker rm kafka-connect
+docker rm kafka
+docker rm schema-registry
+docker rm zookeeper
+docker rm kafka-postgres
+
+echo $'\nkilling process..'
+
+sudo lsof -i:9092 | awk '{if(NR>1) system("kill -9 " $2)}'
+sudo lsof -i:2181 | awk '{if(NR>1) system("kill -9 " $2)}'
+sudo lsof -i:8081 | awk '{if(NR>1) system("kill -9 " $2)}'
+sudo lsof -i:8082 | awk '{if(NR>1) system("kill -9 " $2)}'
+sudo lsof -i:7999 | awk '{if(NR>1) system("kill -9 " $2)}'
+
+echo $'\ndone.'
